@@ -9,6 +9,9 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
+      - static_volume:/vol/web/static:ro
+      - media_volume:/vol/web/media:ro
+
     networks:
       - fusionatech
       - dobleseguridad
